@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash register App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="header">Cash Register App</header>
+   <div class="container">
+       <p class="intro">
+           Know the minimum amount of notes to be returned by entering the bill amount and the cash given.
+       </p>
+
+       <label for="billAmount">Bill Amount:</label>
+       <input type="text"  id="billAmount"/>
+
+       <button class="nextBtn">Next</button>
+       <p id="errorMessage">
+
+       </p>
+
+    </p>
+       <label for="cashGiven">Cash Given:</label>
+       <input type="text" id="cashGiven"></input>
+       <button class="checkBtn">Check</button>
+
+       <label for="notesRequired">So the number of notes are:</label>
+       <textarea style="color: black;" disabled id="notesRequired" cols="30" rows="5"></textarea>
+
+   </div> 
+
+</body>
+<script src="/app.js"></script>
+</html>
