@@ -12,6 +12,7 @@ body{
     background-image: url("/header.jpg");  
     color:ghostwhite;
     background-size: cover;
+    background-repeat: no-repeat;
     text-shadow: 2px 2px black;
 }
 *, html {
