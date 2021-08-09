@@ -4,6 +4,10 @@
     flex-direction: column;
     margin:2rem;
 }
+.cashBox, .displayBox{
+  
+    flex-direction: column;
+}
 body{
     background-image: url("/header.jpg");  
     color:ghostwhite;
@@ -22,18 +26,25 @@ body{
 }
 
 .intro{
+    background-color: rgba(9, 39, 31, 0.5);
     text-align:center;
     font-size:larger;
+    padding: 1rem 0rem;
+    
 }
 
 label,input,textarea{
     margin:0.5rem 0 0.5rem 0;
-    font-size:large;
-}
+    font-size:larger;
+}   
 
+#errorMessage{
+    color:rgb(200,0, 0);
+    text-shadow: 1px 1.3px black;
+}
 button{
     width:fit-content;
-    align-self: center;
+    align-self:center;
     font-size:larger;
     padding:0.5rem;
     background-color: #48514c;
@@ -41,4 +52,5 @@ button{
     border-style: none;
     color:ghostwhite;
     text-shadow: 2px 2px black;
+    margin: 0 0 1rem 0;
 }

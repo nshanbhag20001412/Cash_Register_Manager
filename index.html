@@ -9,26 +9,29 @@
 </head>
 <body>
    <header class="header">Cash Register App</header>
+     
+   <p class="intro">
+    Know the minimum amount of notes to be returned by entering the bill amount and the cash given.
+   </p>
+
    <div class="container">
-       <p class="intro">
-           Know the minimum amount of notes to be returned by entering the bill amount and the cash given.
-       </p>
 
        <label for="billAmount">Bill Amount:</label>
        <input type="text"  id="billAmount"/>
-
        <button class="nextBtn">Next</button>
-       <p id="errorMessage">
 
-       </p>
+       <p id="errorMessage"></p>
 
-    </p>
-       <label for="cashGiven">Cash Given:</label>
-       <input type="text" id="cashGiven"></input>
-       <button class="checkBtn">Check</button>
-
-       <label for="notesRequired">So the number of notes are:</label>
-       <textarea style="color: black;" disabled id="notesRequired" cols="30" rows="5"></textarea>
+            <div class="cashBox">
+            <label for="cashGiven">Cash Given:</label>
+            <input type="text" id="cashGiven"></input>
+            <button class="checkBtn">Check</button>
+            </div>
+      
+            <div class="displayBox">
+            <label for="notesRequired">So the number of notes are:</label>
+            <textarea style="color: black;" disabled id="notesRequired" cols="30" rows="5"></textarea>
+            </div>
 
    </div> 
 

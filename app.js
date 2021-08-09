@@ -1,27 +1,37 @@
 var billAmount=document.querySelector("#billAmount");
 var nextBtn=document.querySelector(".nextBtn");
+var checkBtn=document.querySelector(".checkBtn");
 var cashGiven=document.querySelector("#cashGiven");
 var notesRequired=document.querySelector("#notesRequired");
 var errorMessage=document.querySelector("#errorMessage");
+var displayBox=document.querySelector(".displayBox");
+var cashBox=document.querySelector(".cashBox");
+
+cashBox.style.display="none";
+displayBox.style.display="none";
 
 var numberOfNotes;
-const notes=[2000, 500, 100, 20, 10,5];
+
+const notes=[2000, 500, 100, 20, 10,5,1];
+
+
 
 nextBtn.addEventListener("click" ,checkBillAmount)
+checkBtn.addEventListener("click" ,checkBillAmount)
 
  function checkBillAmount()
  {  
 
     if(billAmount.value>0){
-
-        if(cashGiven.value>=billAmount.value){
+        cashBox.style.display="flex";
+        if(Number(cashGiven.value)>=Number(billAmount.value)){
           
           const amountToReturn=cashGiven.value-billAmount.value;
           returnChange(amountToReturn);
         }
         else{
 
-          showMessage("Cash should be great than bill amount");
+          showMessage("Note:Cash should be great than Bill amount");
         }
     }
     else{
@@ -38,15 +48,23 @@ nextBtn.addEventListener("click" ,checkBillAmount)
  }
 
  function returnChange(amountToReturn){
-
+  
+    displayBox.style.display="flex";
+    
     var amount=amountToReturn; 
   
     for(i=0;i<notes.length;i++){
 
-      temp=Math.trunc(amount/notes[i]);
-      if(temp>0){
+      console.log("amount:"+amount);
+      console.log("currentnote:"+notes[i]);
 
-        display(temp,notes[i]);
+      numberOfNotes=Math.trunc(amount/notes[i]);
+
+      console.log("numberofnotes"+numberOfNotes);
+
+      if(numberOfNotes>0){
+
+        display(numberOfNotes,notes[i]);
       }
       amount=amount%notes[i];
 
@@ -59,8 +77,9 @@ nextBtn.addEventListener("click" ,checkBillAmount)
     errorMessage.style.display="none";
  }
 
- function display(temp,currentNote)
+ function display(numberOfNotes,currentNote)
  {
-     notesRequired.innerHTML=temp +" notes of "+currentNote;
+  notesRequired.innerHTML=notesRequired.innerHTML +numberOfNotes+" notes of "+currentNote+"\n";
     
  }
+
