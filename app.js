@@ -17,30 +17,32 @@ const notes=[2000, 500, 100, 20, 10,5,1];
 
 
 nextBtn.addEventListener("click" ,checkBillAmount)
-checkBtn.addEventListener("click" ,checkBillAmount)
+checkBtn.addEventListener("click" ,calculate)
 
  function checkBillAmount()
  {  
 
     if(billAmount.value>0){
-        cashBox.style.display="flex";
-        if(Number(cashGiven.value)>=Number(billAmount.value)){
-          
-          const amountToReturn=cashGiven.value-billAmount.value;
-          returnChange(amountToReturn);
-        }
-        else{
-
-          showMessage("Note:Cash should be great than Bill amount");
-        }
+        cashBox.style.display="flex"; 
     }
     else{
-
       showMessage("Bill Amount is not Valid");
     }
     
  }
 
+ function calculate(){
+
+  if(Number(cashGiven.value)>=Number(billAmount.value)){
+          
+    const amountToReturn=cashGiven.value-billAmount.value;
+    returnChange(amountToReturn);
+  }
+  else{
+
+    showMessage("Note:Cash should be great than Bill amount");
+  }
+ }
  function showMessage(message) {
 
     errorMessage.style.display="block";
