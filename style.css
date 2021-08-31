@@ -54,3 +54,25 @@ button{
     text-shadow: 2px 2px black;
     margin: 0 0 1rem 0;
 }
+
+.footer{
+    background-color:#48514c;
+    padding:1rem 1rem;
+    text-align: center;
+    background-size:cover;
+    color: white;
+    position:absolute;
+   bottom:0px;
+   width:97.52%;
+}
+.footer ul{
+    padding-inline-start: 0px;
+    
+}
+
+.link{
+
+    text-decoration: none;
+    color: white;
+    padding: 0 5vh;
+}
